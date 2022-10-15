@@ -46,6 +46,10 @@ textarea {
     border: none;
 }
 
+#preview {
+    padding: 20px 30px;
+}
+
 @media (min-width:801px) {
     main {
         display: flex;
