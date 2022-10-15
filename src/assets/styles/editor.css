@@ -1,0 +1,64 @@
+:root {
+    --light-grey: 1px solid gainsboro;
+    --dark-grey: #6d7579;
+}
+
+main {
+    width: inherit;
+    height: 93%;
+}
+
+#markdown, #render {
+    width: inherit;
+    height: 100%;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 5%;
+    padding: 10px;
+    border-bottom: var(--light-grey);
+}
+
+.section-heading {
+    font-family: 'Barlow', sans-serif;
+    font-size: 90%;
+    font-weight: 600;
+    color: var(--dark-grey);
+}
+
+.btn-icon:hover {
+    cursor: pointer;
+}
+
+textarea {
+    background-color: inherit;
+    color: inherit;
+    font-family: 'Encode Sans' , sans-serif;
+    font-size: 110%;
+    width: 100%;
+    height: 95%;
+    resize: none;
+    padding: 10px;
+    border: none;
+}
+
+@media (min-width:801px) {
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #markdown, #render {
+        display: block;
+        width: 50%;
+        height: 100%;
+    }
+
+    #markdown {
+        border-right: var(--light-grey);
+    }
+}

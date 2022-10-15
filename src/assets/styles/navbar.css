@@ -1,0 +1,33 @@
+:root {
+    --dark-blue-grey: #202c39;
+    --lighter-blue-grey: #283845;
+    --text-white: white;
+    --border-white: white;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: inherit;
+    height: 7%;
+    border-bottom: 1px solid black;
+    padding: 0 10px;
+    background-color: var(--dark-blue-grey);
+    color: var(--text-white);
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--border-white);
+}
+
+.btn:hover {
+    background-color: var(--lighter-blue-grey);
+}
+
+.btn:active {
+    border-width: 1px;
+}
