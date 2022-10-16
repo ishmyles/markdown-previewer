@@ -24,18 +24,19 @@ class Editor extends Component {
         const handler = e => this.setState({isMobileOrTablet: e.matches});
         window.matchMedia("(max-width: 800px)").addEventListener('change', handler);
         this.setState({
-            markdownInput: 
+            markdownInput:
             `![MarkedUp Logo](https://i.ibb.co/JdG0Rwg/markedup-logo-xs.png)
-            \n# Welcome to MarkedUp\nYour simplified Markdown Editor, built with React JS.\nCheck out the github repo [here](https://github.com/ishmyles/markdown-previewer).\nCreate anything you want - let's get started!
-            \n## Getting Started\nDelete everything on the **MARKDOWN** section (left side) to remove all this text.
-            \n## Basic Syntax\nBelow are some examples, click [here](https://www.markdownguide.org/basic-syntax/) for full detailed information on markdown syntax.\nMarkedUp also supports HTML input, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML) for more information & basic syntax.
+            \n<p style="font-size: 12px;">This app was created by <a href="https://github.com/ishmyles">ishmyles</a> - check out the github repo for this project <a href="https://github.com/ishmyles/markdown-previewer">here</a>.<p>
+            \n# Welcome to MarkedUp\nYour simplified Markdown Editor, compatible for both mobile & desktop. It's lightweight, minimal & very easy to use.\nType anything you want - let's get started!
+            \n## Getting Started\nDelete everything in the **MARKDOWN** section (left on the side) to remove all this text.
+            \n## Basic Syntax\nBelow are some examples, click [here](https://www.markdownguide.org/basic-syntax/) for full detailed information on markdown syntax.\n*MarkedUp also supports HTML input, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML) for more information & basic syntax.*
             \n### Headings\nBelow are examples of headings:
             \n# Heading (Level 1)\n## Heading (Level 2)\n### Heading (Level 3)\n#### Heading (Level 4)\n##### Heading (Level 5)\n###### Heading (Level 6)
             \n### Paragraphs\nJust type normally to create a paragraph.
-            \n### Line Breaks\nCreate a new line by pressing 'Enter' (or 'return') or by using \`\`\` <br>\`\`\`.
+            \n### Line Breaks\nCreate a new line by pressing 'Enter' (or 'return') or just use \`<br>\`.\nRead [documentation](https://www.markdownguide.org/basic-syntax/) for more info.
             \n### Emphasis
-            \n#### Bold Text\n**This text is bold**\n__This is also bold__
-            \n#### Italic Text\n*This text is italic*\n_This is also italic_
+            \n#### Bold Text\n- **This text is bold**\n- __This is also bold__
+            \n#### Italic Text\n- *This text is italic*\n- _This is also italic_
             \n### Code block
             \n\`\`\`\nText can be written inside this code block\n\`\`\`
             \n### Blockquote\n   > This is a blockquote
@@ -43,7 +44,7 @@ class Editor extends Component {
             \nThis also counts as a list \n- Item one\n- Item two\n- Item three\n   - Sub item
             \n### Images\n\`\`\`\n![Broken Link Description](www.linkToImg.com/imageFile.png)\n\`\`\`
             \n### Links\n\`\`\`\n[Clickable Text](www.example.com)\n\`\`\``
-        })
+        });
     }
 
     changeMode() {
@@ -105,3 +106,24 @@ class Editor extends Component {
 }
  
 export default Editor;
+
+/*
+`![MarkedUp Logo](https://i.ibb.co/JdG0Rwg/markedup-logo-xs.png)
+            \n# Welcome to MarkedUp\nYour simplified Markdown Editor built with React JS\nCheck out the github repo [here](https://github.com/ishmyles/markdown-previewer).\nCreate anything you want - let's get started!
+            \n## Getting Started\nDelete everything on the **MARKDOWN** section (left side) to remove all this text.
+            \n## Basic Syntax\nBelow are some examples, click [here](https://www.markdownguide.org/basic-syntax/) for full detailed information on markdown syntax.\nMarkedUp also supports HTML input, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML) for more information & basic syntax.
+            \n### Headings\nBelow are examples of headings:
+            \n# Heading (Level 1)\n## Heading (Level 2)\n### Heading (Level 3)\n#### Heading (Level 4)\n##### Heading (Level 5)\n###### Heading (Level 6)
+            \n### Paragraphs\nJust type normally to create a paragraph.
+            \n### Line Breaks\nCreate a new line by pressing 'Enter' (or 'return') - *read [doccumentation](https://www.markdownguide.org/basic-syntax/) for more info.*
+            \n### Emphasis
+            \n#### Bold Text\n**This text is bold**\n__This is also bold__
+            \n#### Italic Text\n*This text is italic*\n_This is also italic_
+            \n### Code block
+            \n\`\`\`\nText can be written inside this code block\n\`\`\`
+            \n### Blockquote\n   > This is a blockquote
+            \n### Lists\nThe numbers do not have to be written in order:\n1. First item\n2. Second item\n3. Third item\n   1. Indented item
+            \nThis also counts as a list \n- Item one\n- Item two\n- Item three\n   - Sub item
+            \n### Images\n\`\`\`\n![Broken Link Description](www.linkToImg.com/imageFile.png)\n\`\`\`
+            \n### Links\n\`\`\`\n[Clickable Text](www.example.com)\n\`\`\``
+*/
