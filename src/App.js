@@ -13,9 +13,9 @@ class App extends Component {
   }
 
   toggleTheme() {
-    this.setState({
-      darkMode: !this.state.darkMode
-    })
+    this.setState((state, props) => ({
+      darkMode: !state.darkMode
+    }))
   }
 
   render() { 
