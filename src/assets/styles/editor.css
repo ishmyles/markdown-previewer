@@ -3,15 +3,19 @@
     --dark-grey-border: 1px solid #6d7579;
     --text-dark-grey: #6d7579;
     --text-white: white;
+    --code-font: 'Encode Sans', sans-serif;
+    --code-block-bg: #353b45;
+    --blockquote-bg: #656c79;
+    --blockquote-border: #324361;
 }
 
 main {
-    width: inherit;
+    width: 100%;
     height: 93%;
 }
 
 #markdown, #render {
-    width: inherit;
+    width: 100%;
     height: 100%;
 }
 
@@ -69,7 +73,7 @@ textarea, #preview {
 textarea {
     background-color: inherit;
     color: inherit;
-    font-family: 'Encode Sans' , sans-serif;
+    font-family: var(--code-font);
     font-size: 105%;
     width: 100%;
     height: 95%;
@@ -82,7 +86,50 @@ textarea {
     height: 95%;
 }
 
-/* Add styled rendered HTML */
+#preview > * {
+    line-height: 1.5;
+    padding-bottom: 10px;
+}
+
+#preview > h1 {
+    padding-top: 20px;
+}
+
+#preview > h2, h3, h4, h5, h6 {
+    padding-top: 10px;
+}
+
+#preview > p > a, 
+#preview > p > em > a, 
+#preview > p > strong > a,
+#preview > p > ul > a,
+#preview > p > ol > a {
+    color: #03a7dd;
+}
+
+#preview > p > code {
+    font-family: var(--code-font);
+    font-size: 0.8em;
+}
+
+#preview > pre {
+    background-color: var(--code-block-bg);
+    font-family: var(--code-font);
+    color: aliceblue;
+    width: fit-content;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+#preview > blockquote {
+    color: var(--text-white);
+    background-color: var(--blockquote-bg);
+    border-left: 10px solid var(--blockquote-border);
+    width: fit-content;
+    margin-left: 25px;
+    padding: 10px;
+}
 
 
 @media (min-width:801px) {
