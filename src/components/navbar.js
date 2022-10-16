@@ -9,7 +9,7 @@ class Navbar extends Component {
     render() { 
         return ( 
             <nav id='navbar'>
-                <p>Markdown Previewer</p> {/* Place holder for app logo */}
+                <h1 id="logo">&lt;MarkedUp/&gt;</h1>
                 <div className='btn' onClick={this.props.changeTheme}>
                     {(this.props.darkTheme) ? <i className="bi bi-sun-fill"></i> : <i className="bi bi-moon"></i>}
                 </div>

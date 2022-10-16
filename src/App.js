@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from './components/navbar';
 import Editor from './components/editor';
-// import logo from './logo.svg';  --TODO: Create logo & favicon for app
 import './assets/styles/App.css';
 
 class App extends Component {
