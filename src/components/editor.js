@@ -13,6 +13,17 @@ class Editor extends Component {
         super(props);
         this.state = { 
             markdownMode: true,
+            markdownInput: '',
+            isMobileOrTablet: window.matchMedia("(max-width: 800px)").matches
+        }
+        this.changeMode = this.changeMode.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
+    }
+
+    componentDidMount() {
+        const handler = e => this.setState({isMobileOrTablet: e.matches});
+        window.matchMedia("(max-width: 800px)").addEventListener('change', handler);
+        this.setState({
             markdownInput: 
             `![MarkedUp Logo](https://i.ibb.co/JdG0Rwg/markedup-logo-xs.png)
             \n# Welcome to MarkedUp\nYour simplified Markdown Editor, built with React JS.\nCheck out the github repo [here](https://github.com/ishmyles/markdown-previewer).\nCreate anything you want - let's get started!
@@ -31,16 +42,8 @@ class Editor extends Component {
             \n### Lists\nThe numbers do not have to be written in order:\n1. First item\n2. Second item\n3. Third item\n   1. Indented item
             \nThis also counts as a list \n- Item one\n- Item two\n- Item three\n   - Sub item
             \n### Images\n\`\`\`\n![Broken Link Description](www.linkToImg.com/imageFile.png)\n\`\`\`
-            \n### Links\n\`\`\`\n[Clickable Text](www.example.com)\n\`\`\``,
-            isMobileOrTablet: window.matchMedia("(max-width: 800px)").matches
-        }
-        this.changeMode = this.changeMode.bind(this);
-        this.handleInputChange = this.handleInputChange.bind(this);
-    }
-
-    componentDidMount() {
-        const handler = e => this.setState({isMobileOrTablet: e.matches});
-        window.matchMedia("(max-width: 800px)").addEventListener('change', handler);
+            \n### Links\n\`\`\`\n[Clickable Text](www.example.com)\n\`\`\``
+        })
     }
 
     changeMode() {
