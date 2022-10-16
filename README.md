@@ -10,13 +10,13 @@ The project was created with:
 ## Screenshots
 
 ### Desktop (Dark Mode)
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Mobile - Edit Mode (Light Mode)
-![](./screenshot2.jpg)
+![](./screenshot2.png)
 
 ### Mobile - Preview Mode (Light Mode)
-![](./screenshot3.jpg)
+![](./screenshot3.png)
 
 ## Available Scripts
 
